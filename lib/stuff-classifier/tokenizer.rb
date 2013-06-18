@@ -64,6 +64,7 @@ class StuffClassifier::Tokenizer
         end
 
         words << (block_given? ? (yield w) : w)
+        nil
       end
     end
 
