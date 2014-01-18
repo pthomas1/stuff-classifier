@@ -117,12 +117,12 @@ class StuffClassifier::Base
 
   # return the number of categories
   def total_categories
-    categories.length
+    @total_categories ||= categories.length #fls
   end
 
   # return categories list
   def categories
-    @category_list.keys
+    @categories ||= @category_list.keys #fls
   end
 
   # train the classifier
